@@ -1,32 +1,16 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  /* font-weight: 400; */
-  padding:  2rem;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-
-  color: black;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
 }
 
 .container {
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
-  
   padding-right: 2rem;
   padding-left: 2rem;
+  min-height: 100vh;
 }
 .note {
   background-color: #fef68a;
@@ -37,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  white-space: pre-wrap;
   /* max-width: 200px; */
 }
 .note-footer {
@@ -49,27 +34,70 @@ body {
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.note.new-note{
+.note.new-note {
   background-color: #67d7cc;
 }
-textarea{
-  color:black;
+textarea {
+  color: black;
   border: none;
   resize: none;
   background-color: #67d7cc;
 }
-textarea:focus{
-  color:black;
+textarea:focus {
+  color: black;
   outline: none;
 }
-.save{
-  color:black;
+.save {
+  color: black;
   background-color: #e1e1e1;
-  border:none;
+  border: none;
   border-radius: 15px;
   padding: 5px 10px 5px 10px;
 }
-.save:hover{
+.save:hover {
   background-color: #ededed;
-  cursor:pointer;
+  cursor: pointer;
+}
+.delete-icon {
+  cursor: pointer;
+  background-color: #fef68a;
+  border-radius: 25px;
+  padding: 0.5em;
+  border: 2px solid #f8f68a;
+}
+.delete-icon:hover {
+  border-radius: 25px;
+  padding: 0.5em;
+  border: 2px solid white;
+  background-color: #fcf8b5;
+}
+.search{
+  display: flex;
+  align-items: center;
+  background-color: rgb(233,233,233);
+  border-radius: 10px;
+  padding:5px;
+  margin-bottom: 1.5em;
+
+}
+.search input{
+  background-color: rgb(233,233,233);
+  border: none;
+  color: black;
+}
+.search input:focus{
+  background-color: rgb(233,233,233);
+  color: black;
+  outline: none;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dark-mode{
+  background-color: black;
+}
+.dark-mode h1{
+  color: white;
 }
